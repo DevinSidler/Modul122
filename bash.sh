@@ -8,6 +8,10 @@
 #
 # Autor: Devin Sidler
 # Datum: 28.09.2021
+
+file1="$1"
+file2="$2"
+
 echo "Dokument 1: $file1"
 echo "Dokument 2: $file2"
 #existieren beiden files?
