@@ -1,20 +1,22 @@
 #!/bin/bash
-#Devin Sidler
-echo "Erraten sie die Zahl zwischen 1 und 20"
-
-finished=false
-
-rndm=$[$RANDOM%20]
-
-until [ $finished = true ]; do
-  read input
-  if [[ $input -gt $rndm ]]
-  then
-    echo "Die Zahl ist kleiner als $input"
-  elif [ $rndm -gt $input ]; then
-    echo "Die Zahl ist grösser als $input"
-  else
-    echo "Das war die richtige Zahl!"
-    finished=true
-  fi
-done
+# Name: Umgestalten.sh - Umgestalten grosser Datenmengen
+#
+# Benutzung:
+# Umgestalten.sh fileOutput fileInput
+#
+# Autor: Devin Sidler
+# Datum: 17.10.2021
+if test $# -ne 2; then
+    echo "Sie müssen Dateinnamen als Argumente eingeben."
+    echo "Anwendung: ./Umgestalten.sh Eingabefile Ausgabefile"
+    exit 1
+fi
+if [ ! -f "$1" ]; then
+    echo "Error, $1 does not exist."
+    exit 1
+fi
+if [ ! -f "$2" ]; then
+    echo "Error, $2 does not exist."
+    exit 1
+fi
+grep -w "2  [0-9][  ,0-9]" "$1" | cut -f 3,4 | tr -d "'" | sort -k 1 -V >"$2"

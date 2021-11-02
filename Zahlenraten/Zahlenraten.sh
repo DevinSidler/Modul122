@@ -1,5 +1,11 @@
 #!/bin/bash
-#Devin Sidler
+# Name: Zahlenraten.sh - Zahlenraten spiel
+#
+# Benutzung:
+# Zahlenraten.sh
+#
+# Autor: Devin Sidler
+# Datum: 16.10.2021
 echo "Erraten sie die Zahl zwischen 1 und 20"
 
 finished=false

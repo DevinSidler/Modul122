@@ -1,1 +1,4 @@
 wsl.exe in kommandozeile
+
+wenn script nicht funktioniert:
+sed -i -e 's/\r$//'

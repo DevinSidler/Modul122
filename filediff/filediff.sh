@@ -2,6 +2,7 @@
 #
 # Name: filediff.sh - Anzeige von unterschiedlichen Zeilen zweier Dokumente
 #
+# Benutzung:
 # filediff.sh file1 file2
 # file1: Ist das erste Dokument
 # file2: Ist das zweite Dokument
